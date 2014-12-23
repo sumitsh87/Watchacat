@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/show_landing_page'
+
   devise_for :users
-  root :to => redirect('/ideas')
+  root :to => 'home#show_landing_page'
   resources :ideas
 
   # The priority is based upon order of creation: first created -> highest priority.
